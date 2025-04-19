@@ -1,6 +1,6 @@
 # StandtoCherax
 
-**StandtoCherax** is a custom-made GTA V vehicle converter tool that converts **Stand Mod Menu .txt vehicle save files** into **Cherax .json vehicle files**.
+**StandtoCherax** is a custom-made GTA V vehicle converter tool that converts **Stand Mod Menu .txt vehicle files** into **Cherax .json vehicle files**.
 
 > 💾 **No Python installation is required. Just run the EXE.**
 
