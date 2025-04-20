@@ -6,46 +6,55 @@
 
 To use the `StandtoCherax.exe`, make sure the following files are in the **same folder** as the executable:
 
-- `StandtoCherax.exe` ✅ *(This program)*
-- `Base.json` ✅ *(Template vehicle data used for conversion)*
-- `VehicleList.ini` ✅ *(Matches model names to model hashes)*
+- `StandtoCherax.exe` ✅ *(The converter tool)*
+- `Base.json` ✅ *(Base vehicle structure used to build output JSON)*
+- `VehicleList.ini` ✅ *(Model name → hash mappings used for correct Cherax values)*
 
 ---
 
 ## 🚀 How to Use
 
 1. **Run `StandtoCherax.exe`**
-
-2. **Click `📂 Select Stand Vehicle folder`**
-   
-3. **Click `🚀 Convert to Cherax .json(s)`**
-   - The converter will transform each `.txt` file from the selected folder to `.json` files compatible with Cherax.
-
-4. **Output Location**
-   - Converted files are saved to a folder named after the selected folder with the pre-fix "Cherax_"
+2. Click **"Open Stand Vehicle 📂"**
+   - Select a **root folder** that contains subfolders (or itself) with `.txt` files exported from Stand Mod Menu.
+3. Click **"🚀 Convert to Cherax .json(s)"**
+   - The script will recursively search for `.txt` files in the root and all subfolders.
+4. **Output Location:**
+   - A new folder will be created named:  
+     ```
+     Cherax_<SelectedRootFolder>/
+     ├── Cherax_<SubfolderName>/
+     │   └── file1.json
+     └── Cherax_<AnotherSubfolder>/
+         └── file2.json
+     ```
 
 ---
 
-## ✅ Supported Features
+## ✅ Key Features
 
-- Parses Stand vehicle `.txt` data into structured Cherax `.json`.
-- Matches model names to hashes via `VehicleList.ini`.
-- Handles mod indexes, neons, wheel types, custom colors, plates, etc.
+- Batch converts **all `.txt` files** from the selected folder **and all subfolders**
+- Each subfolder becomes its own Cherax output folder (named `Cherax_<Subfolder>`)
+- Outputs are neatly organized inside `Cherax_<RootFolder>`
+- Includes GTA-styled UI with purple/pink gradient
+- Automatically parses:
+  - Vehicle mods, colors, neons, wheels, plate text, tints
+  - Model hashes matched via `VehicleList.ini`
 
 ---
 
 ## 🛠 Troubleshooting
 
-- 🟥 **"Missing Base.json"** → Place `Base.json` in the same directory.
-- 🟥 **"Missing VehicleList.ini"** → Place `VehicleList.ini` in the same directory.
-- 🟨 **"No files selected"** → Make sure you selected one or more `.txt` files before clicking convert.
+- 🟥 **Missing Base.json** → Place `Base.json` in the EXE folder
+- 🟥 **Missing VehicleList.ini** → Required to resolve model names to hashes
+- 🟨 **No `.txt` files found** → Ensure the folder or its subfolders contain `.txt` vehicle files
 
 ---
 
 ## 💬 Credits
 
 - Created by **Bunny**  
-- Discord **.itsBunny**
+- Discord `.itsBunny`
 
 ---
 
